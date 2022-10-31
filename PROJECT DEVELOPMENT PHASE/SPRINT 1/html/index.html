@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+  
+    <div class="login_form">
+        
+    
+
+   
+        <p class = "heading"style=" font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder; color: white; padding-left:35px;">WELCOME TO INVENTORY MANAGEMENT SYSTEM</p>
+       <br><br><br>       
+       <div class="i1"><img src="../images/inve.png" alt="logo" style=" height: 250px; width: 450px;"></div>>
+       <div class="i2">
+        <center>
+    <form name="login_form" method="post"  style="padding-top:150px ;" id="loginform">
+        <label  for = "username" style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: rgb(255, 166, 249);">USERNAME:</label>
+        <input type="text"  style="height: 30px; width:200px; font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: medium;" placeholder="Enter username" id="username">
+        <br><br><br>
+        <label for = "pass" style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: rgb(255, 166, 249);" >PASSWORD:</label>
+        <input type="password" style="height: 30px; width:200px; font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: medium;"placeholder="Enter password" id="password">
+        <br><br><br>
+        <label for = "Role" style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: rgb(255, 166, 249);"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROLE:</label>
+        
+        <select name="Role" id="role" style="height: 30px; width:200px; font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: medium;" value="Retailer">
+            <option value="retailer">Retailer</option>
+            <option value="employee">Employee</option>
+        </select>
+        <br><br><br>
+        <button style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large;" type="button"  class="login_button" id="butt">LOGIN</button>
+        <br><br><br><br><br><br>
+
+    </form>
+    </div>
+</center>
+
+<div class="i3"><img src="../images/check list.png" alt="logo" style=" height: 250px; width: 450px;"></div>
+</div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
