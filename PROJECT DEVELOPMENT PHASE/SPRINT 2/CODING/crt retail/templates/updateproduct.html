@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans SC"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        
+        background-color: black;
+      }
+      label {
+        display: inline-block;
+        width: 250px;
+        text-align: left;
+      }
+     .cont {
+        position: absolute;       
+        left: 50vw;
+        top: 57vh;
+       height: 85vh;
+        transform: translate(-50%, -50%);
+        background-color: #ffbcfe;
+        padding: 10px;
+        border-style: solid;
+        border-color: blanchedalmond;
+        font-family:Comic Sans MS, Comic Sans, cursive ; 
+        font-weight: bolder; 
+        color: black;
+      }
+      .btn {
+        width:100px;
+       height: 50px;
+        border-radius: 25%;
+    border-color:black;
+    border-style: solid;
+    background-color: rgb(255, 147, 248); 
+    position: absolute;
+        top: 75vh;
+        left: 15vw;
+      }
+      
+      .btn:hover{
+        background-color:rgb(247, 31, 164);
+      }
+      label {
+        margin-left: 1vw;
+      }
+      .common{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content:space-evenly;
+      }
+    </style>
+    <title>UPDATE PRODUCT</title>
+  </head>
+  <body>
+    <center>
+      <p style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: white; padding-top: 50px;"> Enter the Product details and click Update</p>
+    </center>
+
+       <div class="cont">
+        <form id="catadd" action="uppro" method="post" >
+        <br />
+        <label for="category">SELECT A PRODUCT TO BE UPDATED</label>
+       
+        {% if options %}
+      <select name="protoup" >
+      {% for option in options %}
+          <option value="{{ option }}">{{ option }}</option>
+      {% endfor %}
+      </select>
+  {% endif %}
+      </select>
+      <br><br>
+        <label for="productname" style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder; color: black;">ENTER THE PRODUCT NAME</label>
+        <input type="text" name="pro_name" id="productname" required  /><br /><br />
+        
+        <!-- category,price,quantity,stock limit-->
+        <label for="category">SELECT A CATEGORY</label>
+       
+          {% if message %}
+        <select name="category_name" >
+        {% for val in message %}
+            <option value="{{ val }}">{{ val }}</option>
+        {% endfor %}
+        </select>
+    {% endif %}
+        </select>
+        <br><br>
+        
+        <label for="quantity">ENTER THE QUANTITY WITH UNITS</label>
+        <input type="text" name="quantity" id="quantity" required>
+        <br /><br />
+        <label for="price">ENTER THE PRICE</label>
+        <input type="number" step="0.01" name="price" id="price" required>
+        <br /><br />
+        <label for="criticallimit">ENTER THE CRITICAL STOCK LIMIT</label>
+        <input type="number" name="critical_stock" id="limit" required>      
+        <br /><br />
+        <label for="profit">ENTER THE PROFIT PER QUANTITY</label>
+        <input type="number"  step="0.01" name="profit" id="profit" required>
+        <br /><br />
+        <button style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: black;" type="submit" class="btn" name="button" >UPDATE</button>
+       </form>
+      </div>
+         
+  
+      
+   
+  </body>
+</html>
