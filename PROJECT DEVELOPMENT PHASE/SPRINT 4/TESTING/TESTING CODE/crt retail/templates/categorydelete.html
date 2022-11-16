@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans SC"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        
+        background-color: black;
+      }
+      .cont {
+        position: absolute;
+        height: 150px;
+        width: 400px;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #ffbcfe;
+        padding: 10px;
+        border-style: solid;
+        border-color: blanchedalmond;
+      }
+      .btn {
+        width:100px;
+       height: 50px;
+        border-radius: 25%;
+    border-color:black;
+    border-style: solid;
+    background-color: rgb(255, 147, 248); 
+    position: absolute;
+        top: 15vh;
+        left: 12vw;
+      }
+     
+      .btn:hover{
+        background-color:rgb(247, 31, 164);
+      }
+      label {
+        margin-left: 1vw;
+      }
+      .common{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content:space-evenly;
+      }
+    </style>
+    <title>DELETE CATEGORY</title>
+  </head>
+  <body>
+    <center>
+      <p style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: white; padding-top: 100px;"> Enter the category name and click Delete</p>
+    </center>
+
+       <div class="cont">
+        <form id="catdel" action="delcat" method="post">
+        <br />
+        <label for="addcategory" style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder; color: black;">ENTER THE CATEGORY</label>
+        <input type="text" name="category_name"  required  /><br /><br />
+        <button style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: black;" type="submit" class="btn" name="button" id="deletebut">DELETE</button>
+       </form>
+      </div>    
+  </body>
+</html>
