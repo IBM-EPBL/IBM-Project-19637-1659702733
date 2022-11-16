@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee home page</title>
+    <style>
+      html{
+   font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large;
+   background-image: url('https://img.freepik.com/premium-vector/warehouse-with-boxes-employees-managing-goods-inventory-stock-warehouse-shelves-product-storage_327176-298.jpg?w=2000');
+   background-repeat: no-repeat;
+        background-size: cover;
+}
+.menu-btn {
+    background-color: rgb(255, 166, 249);
+    color: black;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Comic Sans MS, Comic Sans, cursive ;
+    border: none;
+ }
+ .dropdown-menu {
+    position: relative;
+    display: inline-block;
+ }
+ .menu-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 166, 249);
+    min-width: 160px;
+    z-index: 1;
+ }
+ nav{
+    background-color: rgb(255, 166, 249);
+ }
+ .links,.links-hidden{
+    display: inline-block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Comic Sans MS, Comic Sans, cursive ;
+    font-weight: bold;
+ }
+ .links-hidden{
+    display: block;
+ }
+ .links{
+    display: inline-block;
+ }
+ .links-hidden:hover,.links:hover {
+    background-color: #ff4da6;
+ }
+ .dropdown-menu:hover .menu-content {
+    display: block;
+ }
+ .dropdown-menu:hover .menu-btn {
+    background-color: #ff4da6;
+ }
+    </style>
+</head>
+<body class="body-text">
+  <header>
+    <nav>
+      <a class="links" href="#">HOME</a>
+      <div class="dropdown-menu">
+         <button class="menu-btn">DAILY PURCHASE</button>
+         <div class="menu-content">
+           <a class="links-hidden" href="/openemporder">PURCHASE</a>
+           <a class="links-hidden" href="/openviewpurchase">VIEW PURCHASE</a>
+         </div>
+         </div>     
+      <a class="links" href="/openempdelorder"> ORDER</a>
+      <a class="links" href="/openviewpurchase">BILLS</a>
+      <a class="links" href="/openviewsummary">SUMMARY</a>
+      <a class="links" href="/openmanual">HELP US</a> 
+      <a class="links" href="/openindex">OUT</a>
+      </nav>
+</header>
+<center>
+   <h2 style="color: rgb(0, 0, 0);">{{message}}</h2>
+   <iframe
+  src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2FRETAILER%2BDASH&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model0000018475b9ee7e_00000001"
+  width="1000"
+  height="700"
+  frameborder="0"
+  gesture="media"
+  allow="encrypted-media"
+  allowfullscreen=""
+></iframe>
+  </center>
+  
+  
+</body>
+</html>
+ 

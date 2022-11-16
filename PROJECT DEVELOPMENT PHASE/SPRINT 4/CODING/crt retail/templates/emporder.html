@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Encode Sans SC"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        
+        background-color: black;
+      }
+      label {
+        display: inline-block;
+        width: 250px;
+        text-align: left;
+      }
+     .cont {
+        position: absolute;       
+        left: 50vw;
+        top: 54vh;
+       height: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #ffbcfe;
+        padding: 10px;
+        border-style: solid;
+        border-color: blanchedalmond;
+        font-family:Comic Sans MS, Comic Sans, cursive ; 
+        font-weight: bolder; 
+        color: black;
+      }
+      .btn {
+        width:120px;
+       height: 50px;
+        border-radius: 25%;
+    border-color:black;
+    border-style: solid;
+    background-color: rgb(255, 147, 248); 
+    position: absolute;
+        top: 36vh;
+        left: 15vw;
+      }
+      
+      .btn:hover{
+        background-color:rgb(247, 31, 164);
+      }
+      label {
+        margin-left: 1vw;
+      }
+      .common{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content:space-evenly;
+      }
+    </style>
+    <title>ADD PURCHASE</title>
+  </head>
+  <body>
+    <center>
+      <p style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: white; padding-top: 60px;"> Enter the Product details and click Purchase</p>
+    </center>
+     
+       <div class="cont">
+        <form  action="mkemporder" method="post" >
+        <br />
+        <label for="cust_name">ENTER CUSTOMER NAME:</label>
+        <input type="text" name="customername">
+        <br><br>
+        <label for="ph_no">ENTER CUSTOMER PHONE NO:</label>
+        <input type="number" name="phoneno">
+        <br><br>
+        <label for="product">SELECT A PRODUCT </label>       
+        {% if options %}
+      <select name="product_name" >
+      {% for option in options %}
+          <option value="{{ option }}">{{ option }}</option>
+      {% endfor %}
+      </select>
+  {% endif %}
+      </select>
+      <br><br>             
+        <label for="quantity">ENTER THE QUANTITY </label>
+        <input type="number" name="quantity" id="quantity" required>
+        <br /><br />
+
+       
+        <button style="font-family:Comic Sans MS, Comic Sans, cursive ; font-weight: bolder;font-size: large; color: black;" type="submit" class="btn" name="button" >PURCHASE</button>
+       </form>
+      </div>
+         
+  
+      
+   
+  </body>
+</html>
