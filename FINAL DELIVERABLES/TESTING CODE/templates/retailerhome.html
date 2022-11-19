@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retailer home page</title>
+    <style>
+      html {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-weight: bolder;
+        font-size: large;
+      }
+      body {
+        background-image: url("https://media.istockphoto.com/photos/the-black-and-silver-are-light-gray-with-white-the-gradient-is-the-picture-id1332097112?b=1&k=20&m=1332097112&s=612x612&w=0&h=C26ugFjc3zItVxZ-B7-i-3Hdo3yi0_A5dsvSrGaMvPc=");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .menu-btn {
+        background-color: rgb(255, 166, 249);
+        color: black;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        border: none;
+      }
+      .dropdown-menu {
+        position: relative;
+        display: inline-block;
+      }
+      .menu-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(255, 166, 249);
+        min-width: 160px;
+        z-index: 1;
+      }
+      nav {
+        background-color: rgb(255, 166, 249);
+      }
+      .links,
+      .links-hidden {
+        display: inline-block;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-weight: bold;
+      }
+      .links-hidden {
+        display: block;
+      }
+      .links {
+        display: inline-block;
+      }
+      .links-hidden:hover,
+      .links:hover {
+        background-color: #ff4da6;
+      }
+      .dropdown-menu:hover .menu-content {
+        display: block;
+      }
+      .dropdown-menu:hover .menu-btn {
+        background-color: #ff4da6;
+      }
+    </style>
+  </head>
+  <body class="body-text">
+    <header>
+      <nav>
+        <a class="links" href="/openhome">HOME</a>
+        <div class="dropdown-menu">
+          <button class="menu-btn">CATEGORY</button>
+          <div class="menu-content">
+            <a class="links-hidden" href="/openaddcategory">ADD CATEGORY</a>
+            <a class="links-hidden" href="/opendelcategory">DELETE CATEGORY</a>
+            <a id="view" class="links-hidden" href="/openupcategory"
+              >UPDATE CATEGORY</a
+            >
+            <a id="view" class="links-hidden" href="openviewcat"
+              >VIEW CATEGORY</a
+            >
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <button class="menu-btn">PRODUCT</button>
+          <div class="menu-content">
+            <a class="links-hidden" href="/openaddpro">ADD PRODUCT</a>
+            <a class="links-hidden" href="/opendelpro">DELETE PRODUCT</a>
+            <a class="links-hidden" href="/openuppro">UPDATE PRODUCT</a>
+            <a class="links-hidden" href="/openviewpro">VIEW PRODUCT</a>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <button class="menu-btn">EMPLOYEE</button>
+          <div class="menu-content">
+            <a class="links-hidden" href="/openaddemp">ADD EMPLOYEE</a>
+            <a class="links-hidden" href="/opendelemp">DELETE EMPLOYEE</a>
+            <a class="links-hidden" href="/openupemp">UPDATE EMPLOYEE</a>
+            <a class="links-hidden" href="/openviewprof">VIEW EMPLOYEE DETAILS</a>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <button class="menu-btn">DAILY PURCHASE</button>
+          <div class="menu-content">
+            <a class="links-hidden" href="/openorder">PURCHASE</a>
+            <a class="links-hidden" href="/openviewpurchase">VIEW PURCHASE</a>
+          </div>
+        </div>
+
+        <a class="links" href="/opendelorder"> ORDER</a>
+
+        <a class="links" href="/openviewpurchase">BILLS</a>
+        <a class="links" href="/openviewsummary">SUMMARY</a>
+        <a class="links" href="/openmanual">HELP US</a>
+        <a class="links" href="/openindex">OUT</a>
+      </nav>
+    </header>
+    <center>
+      <h2 style="color: rgb(255, 255, 255)">{{message}}</h2>
+    </center>
+
+   
+      <iframe
+        src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2FRETAILER%2BDASH&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model0000018475b9ee7e_00000001"
+        width="500"
+        height="700"
+        frameborder="0"
+        gesture="media"
+        allow="encrypted-media"
+        allowfullscreen=""
+      ></iframe>
+    
+    <iframe src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2Fnotification%2Bdashboard&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model000001847a35e0d2_00000000" width="700" height="700" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+  </body>
+</html>
